@@ -41,7 +41,7 @@ export default function Update() {
       body: JSON.stringify({ title, description }),
     };
 
-    fetch(`http://localhost:9999/topics/${id}`, options)
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/topics/${id}`, options)
       .then((response) => {
         return response.json();
       })
@@ -55,7 +55,7 @@ export default function Update() {
   useEffect(() => {
     if (!id) return;
 
-    fetch(`http://localhost:9999/topics/${id}`)
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/topics/${id}`)
       .then((response) => {
         return response.json();
       })

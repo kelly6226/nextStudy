@@ -15,7 +15,7 @@ export default function TopicButtons() {
       headers: { "Content-Type": "application/json" },
     };
 
-    fetch(`http://localhost:9999/topics/${id}`, options)
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/topics/${id}`, options)
       .then((response) => {
         return response.json();
       })

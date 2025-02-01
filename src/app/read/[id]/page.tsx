@@ -1,5 +1,7 @@
 export default async function Read({ params }: { params: { id: string } }) {
-  const response = await fetch(`http://localhost:9999/topics/${params.id}`);
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/topics/${params.id}`
+  );
   const topic = await response.json();
 
   return (

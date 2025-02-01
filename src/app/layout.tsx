@@ -16,7 +16,7 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const resp = await fetch("http://localhost:9999/topics");
+  const resp = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/topics`);
 
   const topics = await resp.json();
 
