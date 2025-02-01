@@ -24,23 +24,21 @@
       "title": "Typescript",
       "description": "Typescript is .........",
       "id": 5
-    }
-  ],
-  "posts": [
+    },
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "title": "Tailwind Css",
+      "description": "Tailwind Css is ...",
+      "id": 6
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "title": "Styled component",
+      "description": "Styled component is ...",
+      "id": 7
+    },
+    {
+      "title": "ㅁ",
+      "description": "ㅁ",
+      "id": 8
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
