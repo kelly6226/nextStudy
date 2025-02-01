@@ -2,6 +2,7 @@ import { Topic } from "@/type/topic";
 import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
+import TopicButtons from "@/component/Button/TopicButtons";
 
 export const metadata: Metadata = {
   title: "Web tutorial",
@@ -33,17 +34,7 @@ export default async function RootLayout({
           ))}
         </ol>
         {children} {/* 여기 있는 children은 page.tsx를 의미 */}
-        <ul>
-          <li>
-            <Link href="/create">Create</Link>
-          </li>
-          <li>
-            <Link href="/update/1">Update</Link>
-          </li>
-          <li>
-            <input type="button" value="Delete" />
-          </li>
-        </ul>
+        <TopicButtons />
       </body>
     </html>
   );
