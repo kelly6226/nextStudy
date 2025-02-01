@@ -1,8 +1,11 @@
+import { Topic } from "@/type/topic";
+
 export default async function Read({ params }: { params: { id: string } }) {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/topics/${params.id}`
+    `${process.env.NEXT_PUBLIC_API_URL}/topics/${params.id}`,
+    { cache: "no-store" }
   );
-  const topic = await response.json();
+  const topic: Topic = await response.json();
 
   return (
     <div>
