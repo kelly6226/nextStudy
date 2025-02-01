@@ -1,16 +1,8 @@
 import { Topic } from "@/type/topic";
 
-type Props = {
-  params: {
-    id: string;
-  };
-  searchParams: { [key: string]: string | string[] | undefined };
-};
-
-export default async function Read({ params }: Props) {
+export default async function Read({ params }: { params: { id: string } }) {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/topics/${params.id}`,
-    { cache: "no-store" }
+    `${process.env.NEXT_PUBLIC_API_URL}/topics/${params.id}`
   );
   const topic: Topic = await response.json();
 
