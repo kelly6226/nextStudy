@@ -25,7 +25,6 @@ export default function Create() {
         return response.json();
       })
       .then((result) => {
-        console.log(result);
         const createdTopicId = result.id;
         router.push(`/read/${createdTopicId}`);
         router.refresh(); // 새로고침과 같음 (서버에 데이터 재요청)
