@@ -2,10 +2,29 @@
 
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export default function TopicButtons() {
+  const router = useRouter();
   const params = useParams();
   const id = params.id;
+
+  const onDeleteClick = () => {
+    const options = {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+    };
+
+    fetch(`http://localhost:9999/topics/${id}`, options)
+      .then((response) => {
+        return response.json();
+      })
+      .then((result) => {
+        console.log("result", result);
+        router.push("/");
+        router.refresh();
+      });
+  };
 
   return (
     <ul>
@@ -18,7 +37,7 @@ export default function TopicButtons() {
             <Link href={`/update/${id}`}>Update</Link>
           </li>
           <li>
-            <input type="button" value="Delete" />
+            <input type="button" value="Delete" onClick={onDeleteClick} />
           </li>
         </>
       )}

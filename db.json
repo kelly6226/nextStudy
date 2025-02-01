@@ -1,16 +1,6 @@
 {
   "topics": [
     {
-      "id": 1,
-      "title": "HTML",
-      "description": "html is ..."
-    },
-    {
-      "id": 2,
-      "title": "CSS",
-      "description": "css is ..."
-    },
-    {
       "title": "React",
       "description": "React is .........",
       "id": 3
@@ -34,16 +24,6 @@
       "title": "Styled component",
       "description": "Styled component is ...",
       "id": 7
-    },
-    {
-      "title": "ㅁ",
-      "description": "ㅁ",
-      "id": 8
-    },
-    {
-      "title": "CSS",
-      "description": "css is ... changed again",
-      "id": 9
     }
   ]
 }

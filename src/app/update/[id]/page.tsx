@@ -36,7 +36,7 @@ export default function Update() {
     ).value;
 
     const options = {
-      method: "PUT",
+      method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title, description }),
     };
