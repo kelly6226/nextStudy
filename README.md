@@ -1,3 +1,15 @@
+## Next관련 ListMaker
+
+next.js 의 App Router 버전을 활용하여 ListMaker를 만들었습니다. </br>
+서버는 jsonServer를 사용해 "Glitch"를 통해 배포하였습니다.
+
+### 주요 기능
+- 기존에 등록된 주제 && 설명을 클릭을 통해 접근 가능
+- 새로운 주제 && 설명 등록 (Create) 가능
+- 기존에 만들어진 주제 && 설명 수정(Change), 삭제(Delete) 가능
+
+---------------------------------
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
