@@ -23,18 +23,28 @@ export default async function RootLayout({
   return (
     <html>
       <body>
-        <h1>
-          <Link href="/">Web</Link>
-        </h1>
-        <ol>
-          {topics.map((item: Topic) => (
-            <li key={item.id}>
-              <Link href={`/read/${item.id}`}>{item.title}</Link>
-            </li>
-          ))}
-        </ol>
-        {children} {/* 여기 있는 children은 page.tsx를 의미 */}
-        <TopicButtons />
+        <main
+          style={{
+            maxWidth: "800px",
+            width: "100%",
+            margin: "0 auto",
+            padding: "20px",
+            minHeight: "100vh",
+          }}
+        >
+          <h1>
+            <Link href="/">Web</Link>
+          </h1>
+          <ol>
+            {topics.map((item: Topic) => (
+              <li key={item.id}>
+                <Link href={`/read/${item.id}`}>{item.title}</Link>
+              </li>
+            ))}
+          </ol>
+          {children} {/* 여기 있는 children은 page.tsx를 의미 */}
+          <TopicButtons />
+        </main>
       </body>
     </html>
   );
