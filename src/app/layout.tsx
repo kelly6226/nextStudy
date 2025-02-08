@@ -1,6 +1,6 @@
 import { Topic } from "@/type/topic";
 import type { Metadata } from "next";
-import "./globals.css";
+import "@/styles/globals.css";
 import Link from "next/link";
 import TopicButtons from "@/component/Button/TopicButtons";
 
